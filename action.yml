@@ -1,4 +1,4 @@
-name: Command Output
+name: Command Output Action
 description: Run a command and store its output
 inputs:
   run:
