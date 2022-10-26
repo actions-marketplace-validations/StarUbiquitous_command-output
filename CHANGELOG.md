@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1](https://github.com/StarUbiquitous/command-output/compare/v1.0.0...v1.0.1) (2022-10-26)
+
+
+### :memo: Documentação
+
+* update README ([ce74efd](https://github.com/StarUbiquitous/command-output/commit/ce74efd85fe5bcde1cdfb5b6de7a14fceaa5b87c))
+
 ## 1.0.0 (2022-10-26)
 
 
