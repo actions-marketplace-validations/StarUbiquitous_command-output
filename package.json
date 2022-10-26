@@ -20,10 +20,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mathiasvr/command-output.git"
+    "url": "git+https://github.com/StarUbiquitous/command-output.git"
   },
   "bugs": {
-    "url": "https://github.com/mathiasvr/command-output/issues"
+    "url": "https://github.com/StarUbiquitous/command-output/issues"
   },
-  "homepage": "https://github.com/mathiasvr/command-output#readme"
+  "homepage": "https://github.com/StarUbiquitous/command-output#readme"
 }
