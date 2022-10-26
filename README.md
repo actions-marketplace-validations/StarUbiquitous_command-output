@@ -1,4 +1,7 @@
-# Command Output
+# Command Output Action
+
+[![Continuous Integration](https://github.com/StarUbiquitous/command-output/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/StarUbiquitous/command-output/actions/workflows/continuous-integration.yml)
+[![CodeQL](https://github.com/StarUbiquitous/command-output/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/StarUbiquitous/command-output/actions/workflows/codeql-analysis.yml)
 
 A `run` alternative that stores command output in a variable.
 
@@ -29,7 +32,7 @@ The output of the command written to stderr.
 ```yaml
 steps:
 - name: Get today's date
-  uses: mathiasvr/command-output@v1
+  uses: StarUbiquitous/command-output@v1.0.0
   id: today
   with:
     run: date +'%Y-%m-%d'
@@ -42,7 +45,7 @@ steps:
 ```yaml
 steps:
 - name: Read file if it exists?
-  uses: mathiasvr/command-output@v1
+  uses: StarUbiquitous/command-output@v1.0.0
   continue-on-error: true
   id: cmd
   with:
