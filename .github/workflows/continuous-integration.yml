@@ -43,11 +43,13 @@ jobs:
         continue-on-error: true
         with:
           run: find / -maxdepth 2 -iname 'tmp' -type d
+
       - name: Assert stdout
-        if: "${{ steps.find.outputs.stdout != '/tmp\n/var/tmp\n' }}"
+        if: contains('/tmp', steps.find.outputs.stdout) && contains('/var/tmp', steps.find.outputs.stdout)
         run: exit 1
+
       - name: Assert stderr
-        if: "${{ steps.find.outputs.stderr != 'find: ‘/root’: Permission denied\nfind: ‘/lost+found’: Permission denied\n' }}"
+        if: contains('find', steps.find.outputs.stderr) && contains('/root', steps.find.outputs.stderr) && contains('/lost+found', steps.find.outputs.stderr) && contains('Permission denied', steps.find.outputs.stderr)
         run: exit 1
 
       - name: Test multiline command with environment variable
@@ -59,11 +61,12 @@ jobs:
           run: |
             echo $HELLO
             echo world!
+
       - name: Assert stdout
-        if: "${{ steps.multi.outputs.stdout != 'Hello\nworld!\n' }}"
+        if: contains('Hello', steps.find.outputs.stdout) && contains('world!', steps.multi.outputs.stdout)
         run: exit 1
       - name: Assert stderr
-        if: "${{ steps.multi.outputs.stderr != '' }}"
+        if: steps.multi.outputs.stderr != ''
         run: exit 1
 
       - name: Test unknown shell
@@ -73,6 +76,7 @@ jobs:
         with:
           run: ls -al
           shell: unknown
+
       - name: Should fail on unknown shell
-        if: ${{ steps.unknown-shell.outcome != 'failure' }}
+        if: steps.unknown-shell.outcome != 'failure'
         run: exit 1
