@@ -13,7 +13,7 @@
   "author": "Mathias Rasmussen <mathiasvr@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@actions/core": "^1.10.1",
+    "@actions/core": "^1.11.0",
     "@vercel/ncc": "^0.38.2",
     "eslint-config-standard": "^16.0.3"
   },
