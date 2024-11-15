@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "@actions/core": "^1.11.1",
-    "@vercel/ncc": "^0.38.2",
+    "@vercel/ncc": "^0.38.3",
     "eslint-config-standard": "^16.0.3"
   },
   "dependencies": {},
